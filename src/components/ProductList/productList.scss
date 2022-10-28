@@ -1,17 +1,24 @@
+
+.ul{
+    height: 100%;
+    padding: 0;
+    width: 100%;
+}
     .container{
         width: 70%;
+        height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
         object-fit: contain;
         flex-wrap: wrap;
-
         .item{
-            width: 220px;
+            width: calc(100vw - 100px);
             height: 150px;
+            padding: 10px;
             border-radius: 20px;
             border: 1px solid lightgrey;
-            margin: 10px 20px;
+            // margin: 10px 0px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -19,12 +26,19 @@
             position: relative;
         
             img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                width: 100px;
+                // height: 100%;
+                object-fit: scale-down;
                 z-index: 1;
             }
-
-           
-            }
+            
         }
+.text-container {
+    display: block;
+    padding: 15%;
+}
+        .p {
+            justify-content: center;
+            
+        }
+    }
