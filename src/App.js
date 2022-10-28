@@ -3,7 +3,9 @@ import PaymentSelector from "./components/PaymentSelector/PaymentSelector.js";
 import ProductList from "./components/ProductList/ProductList.js";
 import Totals from "./components/Totals/Totals.js";
 
-function App() {
+function App(api) {
+  // api.cache(false);
+
   return (
     <div className="App">
       <header className="App-header">CodeIce</header>
