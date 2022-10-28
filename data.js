@@ -48,7 +48,7 @@ export const data = [
     quantity: 1,
   },
   {
-    image: "https://cdn.shopify.com/s/files/1/0405/1117/6862/products/Islabikes-Beinn20-Small-Teal-ChildrensBike.jpg?v=1644601461",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5zGt5i8bDGlOF5ZEfbTJdv42iPaLohA8JRgP8FK96ayLe3-EeN5suoiejSMgqoQJ8huE&usqp=CAU",
     product: "Mirror",
     price: 50.0,
     quantity: 1,
