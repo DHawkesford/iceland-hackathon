@@ -67,18 +67,15 @@ export const data = {
   paymentMethods: [
     {
       name: "Paypal",
-      icon: "paypal",
       balance: 500.00
     },
     {
       name: "Debit Card",
-      icon: "visa",
       balance: 150.00
       
     },
     {
       name: "Store Card",
-      icon: "storecard",
       balance: 30.00
     }
   ]

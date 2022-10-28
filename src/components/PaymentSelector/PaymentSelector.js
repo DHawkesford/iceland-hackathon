@@ -5,11 +5,11 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import * as React from "react";
 import { data } from "../../data.js";
 
-function renderIcon(icon){
-  switch(icon){
-    case "visa": return <FontAwesomeIcon icon={brands("cc-visa")} />
-    case "storecard": return <FontAwesomeIcon icon={brands("cc-amazon-pay")} />
-    case "paypal": 
+function renderIcon(paymentName){
+  switch(paymentName){
+    case "Debit Card": return <FontAwesomeIcon icon={brands("cc-visa")} />
+    case "Store Card": return <FontAwesomeIcon icon={brands("cc-amazon-pay")} />
+    case "Paypal": 
     default:
       return <FontAwesomeIcon icon={brands("paypal")} />
     
@@ -39,8 +39,8 @@ function PaymentSelector({paymentMethods, setPaymentMethods}) {
         aria-label="text formatting"
       >
         {data.paymentMethods.map((method) => (
-          <ToggleButton value={method.name} aria-label={method.name} color="success">
-            {renderIcon(method.icon)}
+          <ToggleButton key={method.name} value={method.name} aria-label={method.name} color="success">
+            {renderIcon(method.name)}
             
             {method.name}
           </ToggleButton>

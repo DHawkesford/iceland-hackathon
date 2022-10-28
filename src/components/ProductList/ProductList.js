@@ -1,7 +1,7 @@
 import "./productList.scss";
-import productPaymentSplit from './ProductTile/productPaymentSplit/productPaymentSplit.js';
+import ProductPaymentSplit from './ProductTile/ProductPaymentSplit/ProductPaymentSplit.js';
 
-function ProductList({basket, setBasket}) {
+function ProductList({basket, setBasket, paymentMethods}) {
   return (
     <div className="container">
       {basket.map((item, index) => (
@@ -10,7 +10,7 @@ function ProductList({basket, setBasket}) {
           <p>{item.product}</p>
           <p>Quantity: {item.quantity}</p>
           <p>Price: £{item.price}</p>
-          <productPaymentSplit index={index}></productPaymentSplit>
+          <ProductPaymentSplit index={index} basket={basket} setBasket={setBasket} paymentMethods={paymentMethods}></ProductPaymentSplit>
         </li>
       ))}
     </div>
