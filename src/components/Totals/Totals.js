@@ -1,13 +1,43 @@
-function Totals(api) {
+function Totals({paymentMethods, basket}) {
   // api.cache(true);
-  return 
-//   {
-    // <div>
-    //     <span>Debit Card: &pound;10.00</span>
-    //     <span>Paypal: &pound;20.00</span>
-    //     <span>Total: &pound;30.00</span>
-    // </div>
-//   };
+
+  let totals = {total: {
+    quantity: 0,
+    total: 0
+  }};
+  
+  for (let i in paymentMethods) {
+    totals[paymentMethods[i]] = {
+      quantity: 0,
+      total: 0
+    }
+  };
+  
+  for (let i in basket) {
+    totals[basket[i].paymentMethod].quantity += basket[i].quantity 
+    totals[basket[i].paymentMethod].total += basket[i].price 
+    totals["total"].quantity += basket[i].quantity 
+    totals["total"].total += basket[i].price 
+  }
+
+
+
+  return (
+    <div>
+        {paymentMethods.map(method => 
+        <div className='payment-total'>
+          <span className='payment-type'>{method}</span>
+          <span className='payment-quantity'>{totals[method].quantity} items</span>
+          <span className='payment-total'>{totals[method].total}</span>
+        </div>
+        )}
+        <div className='payment-total'>
+          <span className='payment-type'>Total</span>
+          <span className='payment-quantity'>{totals.total.quantity} items</span>
+          <span className='payment-total'>{totals.total.total}</span>
+        </div>
+    </div>
+  );
 }
 
 export default Totals;
