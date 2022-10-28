@@ -15,7 +15,7 @@ function App(api) {
       <header className="App-header">CodeIce</header>
       <h1>Your Basket</h1>
       <PaymentSelector paymentMethods={paymentMethods} setPaymentMethods={setPaymentMethods}></PaymentSelector>
-      <ProductList></ProductList>
+      <ProductList basket={basket} setBasket={setBasket}></ProductList>
       <Totals paymentMethods={paymentMethods} basket={basket}></Totals>
     </div>
   );
