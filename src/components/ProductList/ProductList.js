@@ -1,19 +1,17 @@
 import { data } from "./../../data.js";
-import ProductTile from "./ProductTile/ProductTile.js";
+import "./productList.scss";
 
 function ProductList() {
-
   return (
-
-    {data.map(({image, product, price})=>(
-      <img src={props.image} alt="product-item-pic"></img>
-      <p>{props.product}</p>
-      <p>{props.price}</p>
-  ))}
-  )
-
-  // console.log(data);
-  // const basket = data.products.map((item) => <ProductTile>{item}</ProductTile>);
-  // return basket;
+    <div className="container">
+      {data.products.map((item) => (
+        <li className="item" key={item.price}>
+          <img src={item.image} alt="product-item-pic"></img>
+          <p>{item.product}</p>
+          <p>Price: £{item.price}</p>
+        </li>
+      ))}
+    </div>
+  );
 }
 export default ProductList;
