@@ -1,5 +1,5 @@
 import "./productList.scss";
-import ProductPaymentSplit from './ProductTile/ProductPaymentSplit/ProductPaymentSplit.js';
+import ProductPaymentSplit from './ProductTile/productPaymentSplit/productPaymentSplit.js';
 
 function ProductList({basket, setBasket, paymentMethods}) {
   return (
