@@ -18,7 +18,6 @@ function renderIcon(paymentName){
 function productPaymentSplit({index, basket, setBasket, paymentMethods}) {
   // api.cache(true);
 
-
   const handlePaymentMethodChoice = (event, newPaymentMethod) => {
     if (newPaymentMethod !== null) {
         // Update the item in the basket here
