@@ -19,12 +19,12 @@ function productPaymentSplit({index, basket, setBasket, paymentMethods}) {
   // api.cache(true);
 
 
-  const handlePaymentMethodSelector = (event, newPaymentMethod) => {
-    // Update the item in the basket here
-    const newBasket = [...basket];
-    newBasket[index].paymentMethod = newPaymentMethod;
-    
+  const handlePaymentMethodChoice = (event, newPaymentMethod) => {
     if (newPaymentMethod !== null) {
+        // Update the item in the basket here
+        const newBasket = [...basket];
+        newBasket[index].paymentMethod = newPaymentMethod;
+    
         setBasket(newBasket);
     }
   };
@@ -42,7 +42,7 @@ function productPaymentSplit({index, basket, setBasket, paymentMethods}) {
       <ToggleButtonGroup
         orientation="vertical"
         value={basket[index].paymentMethod}
-        onChange={handlePaymentMethodSelector}
+        onChange={handlePaymentMethodChoice}
         aria-label="text formatting"
         exclusive
       >
