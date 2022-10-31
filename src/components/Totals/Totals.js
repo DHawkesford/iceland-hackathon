@@ -23,7 +23,7 @@ function Totals({paymentMethods, basket}) {
 
 
   return (
-    <div>
+    <div className="total-container">
         {paymentMethods.map(method => 
         <div className='payment-total'>
           <span className='payment-type'>{method}</span>
@@ -34,7 +34,7 @@ function Totals({paymentMethods, basket}) {
         <div className='payment-total'>
           <span className='payment-type'>Total</span>
           <span className='payment-quantity'>{totals.total.quantity} items</span>
-          <span className='payment-total'>{totals.total.total}</span>
+          <span>{totals.total.total}</span>
         </div>
     </div>
   );
