@@ -32,10 +32,19 @@
   color: #61dafb;
 }
 
-.payment-total {
-  width: 100%;
+.payment-method {
   display: flex;
   flex-direction: row;
+}
+
+.payment-method-total {
+  font-weight: bold;  
+  display: flex;
+  flex-direction: row;
+}
+
+.payment-method > span, .payment-method-total > span {
+  width: 10vw;
 }
 
 .total-container {
