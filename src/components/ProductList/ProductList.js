@@ -5,6 +5,7 @@ function ProductList({basket, setBasket, paymentMethods}) {
   return (
     <div className="container">
     <ul>
+    <h2>2. Select a payment method for each item in your basket</h2>
       {basket.map((item, index) => (
         <li className="item" key={item.price}>
           <img src={item.image} alt="product-item-pic"></img>

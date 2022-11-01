@@ -24,6 +24,7 @@ function Totals({paymentMethods, basket}) {
 
   return (
     <div className="total-container">
+        <h2>3. Confirm totals and checkout</h2>
         {paymentMethods.map(method => 
         <div className='payment-total'>
           <span className='payment-type'>{method}</span>
