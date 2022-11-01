@@ -1,3 +1,6 @@
+import * as React from 'react';
+import Button from '@mui/material/Button';
+
 function Totals({paymentMethods, basket}) {
   // api.cache(true);
 
@@ -37,6 +40,7 @@ function Totals({paymentMethods, basket}) {
           <span className='payment-quantity'>{totals.total.quantity} items</span>
           <span>£{totals.total.total}</span>
         </div>
+        <Button variant="contained">Checkout</Button>
     </div>
   );
 }
