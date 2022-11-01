@@ -10,11 +10,9 @@ We discussed several ways to implement this feature, focusing on how to make it 
 
 1. [Usage](#usage)
 
-2. [Screenshots](#tech-stack)
+2. [Screenshots](#screenshots)
 
-3. [Future plans](#future-plans)
-
-4. [Contributors](#contributors)
+3. [Contributors](#contributors)
 
 ## Usage
 
